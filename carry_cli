@@ -1,0 +1,3 @@
+#!/bin/sh
+# `carry` command: ./carry render --vendor claude
+exec /usr/bin/env python3 "$(dirname "$0")/tools/carry.py" "$@"

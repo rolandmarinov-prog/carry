@@ -1,0 +1,11 @@
+CC0 1.0 Universal — the Carry format
+
+To the extent possible under law, Roland Marinov has waived all copyright and related or
+neighboring rights to the Carry format: the file shapes described in carry/schema.md, the
+front-matter fields, and the section conventions of self.md and stance.md. The standard is a gift.
+Anyone may implement, extend, or ship it without permission or attribution.
+
+Full legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+(The example files self.md and stance.md describe a fictional person; the tool in tools/ and
+adapters/ is MIT — see LICENSE at the repo root.)
