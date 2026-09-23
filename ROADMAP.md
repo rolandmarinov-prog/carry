@@ -16,3 +16,5 @@ Listed, not built. v0 is the free floor: the format, five nozzles, the hand-run 
 - **Professional seats.** A practitioner (coach, clinician, teacher) conducting the authoring session
   for a client, with the client holding the file.
 - **Pricing.** The paid layer, if any, decided later. The format stays CC0; v0 stays MIT.
+- **Continuo.** The same format and nozzles for an organisation: a company-owned Self and Stance,
+  layered under each person's Carry; audit and self-hosted tooling later. Not in v0.
