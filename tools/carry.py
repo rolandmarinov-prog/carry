@@ -61,10 +61,11 @@ def validate(quiet=False):
             if not re.search(r"^#+\s*Laws", body, re.M | re.I): problems.append("stance.md: no `Laws` section")
             if not re.search(r"^\s*1\.\s+\S", body, re.M): problems.append("stance.md: Laws are not numbered")
             if not re.search(r"^#+\s*Register", body, re.M | re.I): problems.append("stance.md: no `Register` section")
-            if not re.search(r"(do not|don't|won't|will not)[^.\n]*(carry|hold)[^.\n]*(memory|state)", body, re.I) and \
+            # The clause in substance, not in one wording: a negation near claim/carry/hold near state/memory.
+            if not re.search(r"(does not|do not|don't|doesn't|won't|will not|never|no)[^.\n]{0,60}(claim|carry|carries|hold|holds)[^.\n]{0,60}(state|memory)", body, re.I) and \
                not re.search(r"no (memory|state)", body, re.I):
-                problems.append("stance.md: no-state clause missing (the AI must say it carries no memory and asks for the Self)")
-            if not re.search(r"ask[^.\n]*(self|working on)", body, re.I):
+                problems.append("stance.md: no-state clause missing (the AI must say it claims/carries no state and asks for the Self)")
+            if not re.search(r"ask[^.\n]*(self|bundle|working on|what we)", body, re.I):
                 problems.append("stance.md: the no-state clause must ask for the Self (or what we are working on)")
             last = [l for l in body.strip().splitlines() if l.strip()][-1]
             if not re.match(r"\s*Source of truth:", last):

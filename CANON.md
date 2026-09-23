@@ -15,3 +15,9 @@
 - **2026-09-23 · Compatibility is the acceptance criterion.** v0 ships when five nozzles render and
   the README table shows five hand-run passes. No telemetry, no server, no network calls.
 - **2026-09-23 · Licences.** Format CC0 1.0 (the standard is a gift). Tool MIT. Paid layer later.
+- **2026-09-23 · The validator checks the no-state clause in substance, not in one wording.** The
+  first regex would have failed the very block that passed the reference cold test ("does not
+  claim a state it has not been given"; "asks for the bundle"). Loosened to negation + claim/carry
+  /hold + state/memory, and Self/bundle/what-we-are-on. The standard for a nozzle is stricter than
+  the validator's: rendered through `claude`, a Stance holding the reference block reproduced it
+  **byte-for-byte (1,279 B)**. That is the test any future nozzle change must still pass.
