@@ -21,3 +21,9 @@
   /hold + state/memory, and Self/bundle/what-we-are-on. The standard for a nozzle is stricter than
   the validator's: rendered through `claude`, a Stance holding the reference block reproduced it
   **byte-for-byte (1,279 B)**. That is the test any future nozzle change must still pass.
+- **2026-09-23 · Byte-identical is a test, not a sentence** (CAM's T-2 challenge). `tools/test_golden.py`
+  renders every nozzle for two fixtures — Ines, and a fictional Stance shaped like the reference block
+  (preamble, interstitial line, pointers, bare no-state sentence) — and diffs against `tests/golden/`.
+  An empty render is a FAIL, never a golden (the first run minted 1-byte goldens; caught the same hour).
+  The real reference block stays out of this public repo by the sweep rules; it is tested privately
+  through `CARRY_DIR` with the same script.

@@ -52,6 +52,11 @@ python3 tools/carry.py test --vendor claude
 
 Output is text to paste. No automation, no browser, no API in v0.
 
+**The test that runs on its own:** `python3 tools/test_golden.py` renders every nozzle for two
+fixture Carries and diffs the payload byte-for-byte against `tests/golden/`. Any difference fails.
+Regenerating a golden (`--update`) is a human act, reviewed in the PR. A change to what a nozzle
+emits cannot pass unnoticed.
+
 ## The test — is the air the same through every nozzle?
 
 `tests/acceptance.md`: one opening word from the user, four pass conditions — the reply is *in the
