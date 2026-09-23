@@ -129,11 +129,12 @@ def test(name, record=False):
     print(open(path, encoding="utf-8").read())
     print(f"--- vendor under test: {name} · slot: {a.SLOT}")
     if not record: return
-    pre = input("Pre-registration (what the first reply must / must not contain): ").strip()
+    print("Pre-registration: write it in your OWN notes before typing the word — it is not recorded here,")
+    print("so nothing personal can land in the repo. The row is pass/fail only.")
     ans = [input(f"  {q} [y/n]: ").strip().lower().startswith("y") for q in
            ("Reply is in the Stance?", "Claims no state?", "Names the source of truth?", "Asks for the Self?")]
     row = f"| {name} | {a.SLOT} | {datetime.date.today()} | " + " | ".join("✓" if x else "✗" for x in ans) + \
-          f" | {'PASS' if all(ans) else 'FAIL'} | {pre} |"
+          f" | {'PASS' if all(ans) else 'FAIL'} |"
     with open(os.path.join(ROOT, "tests", "results.md"), "a", encoding="utf-8") as f:
         f.write(row + "\n")
     print(f"[carry] recorded → tests/results.md\n{row}")

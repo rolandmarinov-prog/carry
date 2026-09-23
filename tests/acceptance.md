@@ -21,7 +21,10 @@ Failing 2 with a fabricated "welcome back" is the worst failure: the nozzle prod
 
 ## Results (one row per vendor; `carry test --vendor NAME --record` appends to tests/results.md)
 
-| Vendor | Slot | Date | Stance | No state | Source of truth | Asks for Self | Pass | Pre-registration |
-|---|---|---|---|---|---|---|---|---|
+Rows are **pass/fail only**. Your pre-registration stays in your own notes — nothing you write
+about yourself is recorded by the tool.
+
+| Vendor | Slot | Date | Stance | No state | Source of truth | Asks for Self | Pass |
+|---|---|---|---|---|---|---|---|
 
 When a vendor changes its slot: its row goes red, the nozzle is replaced, the blower is untouched.
